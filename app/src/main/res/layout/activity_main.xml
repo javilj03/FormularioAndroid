@@ -61,7 +61,6 @@
         android:layout_marginTop="96dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toEndOf="@+id/txtNombre"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +72,6 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toEndOf="@+id/txtApellidos"
         app:layout_constraintTop_toBottomOf="@+id/txtInputName" />
 
@@ -85,7 +83,6 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/txtInputApellidos" />
 
@@ -97,7 +94,6 @@
         android:layout_marginBottom="332dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtComent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputCorreo"
@@ -107,6 +103,7 @@
         android:id="@+id/btnConfirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="@string/btn_confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnLimp"
@@ -120,6 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
+        android:onClick="onClick"
         android:text="@string/btn_limpiar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

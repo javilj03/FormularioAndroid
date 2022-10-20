@@ -11,7 +11,7 @@ import android.widget.Switch;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText txtInputNombre, txtInputApellido, txtInputCorreo, txtInputComent;
     Button btnConfirm, btnLimpiar;
@@ -33,21 +33,30 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onClick(View view){
+        switch(view.getId()){
+            case R.id.btnConfirmar:
+                leerTexto();
 
+                break;
+            case R.id.btnLimp:
+                limpiar();
+                break;
+        }
+        leerTexto();
+    }
 
     public void leerTexto(){
-        String nombre = txtInputNombre.getText().toString();
-        String apellido = txtInputApellido.getText().toString();
-        String correo = txtInputCorreo.getText().toString();
-        String comentario = txtInputComent.getText().toString();
+        String nom = txtInputNombre.getText().toString();
+        String ape = txtInputApellido.getText().toString();
+        String cor = txtInputCorreo.getText().toString();
+        String com = txtInputComent.getText().toString();
 
-        p = new Persona(nombre,apellido,correo,comentario);
+        p = new Persona(nom,ape,cor,com);
         list.add(p);
 
-        txtInputNombre.setText("");
-        txtInputApellido.setText("");
-        txtInputCorreo.setText("");
-        txtInputComent.setText("");
+        limpiar();
 
     }
     public void limpiar(){
