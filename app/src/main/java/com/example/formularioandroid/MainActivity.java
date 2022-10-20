@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Switch;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnConfirm, btnLimpiar;
     Persona p;
     List<Persona> list = new ArrayList<>();
+    CheckBox CBSub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtInputCorreo = findViewById(R.id.txtInputCorreo);
         txtInputComent = findViewById(R.id.txtInputComent);
 
+        CBSub = findViewById(R.id.checkBox);
 
     }
     @Override
@@ -64,5 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtInputApellido.setText("");
         txtInputCorreo.setText("");
         txtInputComent.setText("");
+        CBSub.setChecked(false);
     }
 }
